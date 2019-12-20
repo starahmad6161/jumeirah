@@ -4,6 +4,7 @@ $(function() {
         height: "calc( 100vh - " + $(".header .nav-bar").innerHeight() + "px)"
     });
 
+    
     /*Main Section Accordion*/
    $(".main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-head svg").on('click', function () {  
        let accordionItem = $(this).parents('.accordion-item');
