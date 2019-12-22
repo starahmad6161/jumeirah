@@ -19,10 +19,10 @@ $(function() {
 
     
     /*Main Section Accordion*/
-   $(".main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-head svg").on('click', function () {  
+   $(".main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-head").on('click', function () {  
        let accordionItem = $(this).parents('.accordion-item');
        accordionItem.find('.acc-content').slideToggle(200).toggleClass('active');
-       $(this).parents('.acc-head').toggleClass('selected');
+       $(this).toggleClass('selected');
    });
 
    //Sidebar [Price Bar]
