@@ -284,7 +284,7 @@ $(function() {
     /**************************************/
     let offerImgsSwiper = new Swiper('.offer-imgs-section .swiper-container', {
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 20,
         slidesPerGroup: 1,
         loop: false,
         loopFillGroupWithBlank: false,
@@ -318,6 +318,5 @@ $(function() {
             paddingTop: ($('.header .slider .box-content .offer-box').innerHeight() / 2)
         });
     });
-    
     
 });

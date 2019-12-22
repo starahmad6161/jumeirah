@@ -152,8 +152,8 @@ label {
 
 .header .slider .box-content .offer-box .offer-content .text {
     font-size: 1.2vmax;
-    overflow-wrap: break-word;
     /*
+    overflow-wrap: break-word;
     */
 }
 
@@ -212,7 +212,7 @@ label {
         width: 7vmax;
         height: 7vmax;
     }
-    .header .slider .box-content .offer-box .offer-content .username
+    .header .slider .box-content .offer-box .offer-content .agent-name
     {
         font-size: 1.5vmax;
     }
@@ -264,7 +264,7 @@ label {
     }
     .header .slider .box-content .offer-box .offer-content .offer-logo
     {
-        width: 70%;
+        width: 100%;
     }
 }
 @media (max-width: 577px) {
@@ -294,7 +294,7 @@ label {
     {
         font-size: 20px;
     }
-    .header .slider .box-content .offer-box .offer-content .username
+    .header .slider .box-content .offer-box .offer-content .agent-name
     {
         font-size: 17px;
     }
@@ -824,471 +824,13 @@ label {
 /*End main-section*/
 
 
-/*Start hotel-section*/
-.hotel-section {
-    background-color: #e6eaed;
-}
-
-.hotel-section .card {
-    border: none;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: .3s;
-}
-
-
-.hotel-section .card .card-img {
-    transition: .3s;
-}
-
-.hotel-section .card.active .card-img {
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.hotel-section .card .card-title {
-    font-size: 22px;
-    color: #444;
-}
-
-.hotel-section .card .stars svg {
-    font-size: 14px;
-    color: #ffc412;
-}
-
-.hotel-section .card .location-info img {
-    width: 13px;
-}
-
-.hotel-section .card .location-info .location-name
-{
-    font-size: 15px;
-}
-.hotel-section .card .room-type-text {
-    font-size: 16px;
-    color: #ae4d7b;
-}
-.hotel-section .card .room-type-text .txt {
-    color: #999;
-}
-
-.hotel-section .card .room-type {
-    color: #ae4d7b;
-    font-size: 15px;
-}
-
-.hotel-section .card .room-type .title {
-    font-size: 18px;
-}
-
-.hotel-section .card .room-type .list-items .list_item {
-    color: #999;
-    font-size: 16px;
-}
-
-.hotel-section .card .rating-info img {
-    width: 120px;
-}
-
-.hotel-section .card .rating-info .rating-num {
-    font-size: 15px;
-    color: #999;
-}
-
-.hotel-section .card .card-arrow-container {
-    background-color: #80395a;
-}
-.hotel-section .card .card-arrow-container .txt {
-    color: #fff;
-    font-size: 15px;
-    transition: .3s;
-}
-.hotel-section .card .card-arrow {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.hotel-section .card .card-arrow-container .card-arrow.arrow-down {
-    background-color: #ae4d7b;
-    opacity: 1;
-}
-
-.hotel-section .card.active .card-arrow-container {
-    pointer-events: none;
-    opacity: 0;
-}
-
-.hotel-section .card .card-arrow.arrow-up {
-    background-color: #b45482;
-}
-
-.hotel-section .card .card-arrow svg {
-    color: #fff;
-    font-size: 15px;
-    transition: .3s;
-}
-
-.hotel-section .card .card-details {
-    display: none;
-}
-/*****For Test*****/
-.hotel-section .card.active .card-details {
-    display: block;
-}
-
-.hotel-section .card .card-details .tabs-container {
-    background-color: #672e49;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-button-prev,
-.hotel-section .card .card-details .tabs-container .swiper-button-next {
-    color: #fff;
-    cursor: pointer;
-    position: static;
-    margin: 0;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-button-prev::after,
-.hotel-section .card .card-details .tabs-container .swiper-button-next::after {
-    font-size: 16px;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide {
-    cursor: pointer;
-}
-.hotel-section .card .card-details .tabs-container .swiper-slide.selected {
-    border-bottom: 6px solid #80395a;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide .icon {
-    width: 20px;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide .icon:nth-of-type(1) {
-    display: block;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide .icon:nth-of-type(2) {
-    display: none;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide.selected .icon:nth-of-type(1) {
-    display: none;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide.selected .icon:nth-of-type(2) {
-    display: block;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide .tab-title {
-    color: #b35381;
-}
-
-.hotel-section .card .card-details .tabs-container .swiper-slide.selected .tab-title {
-    color: #fff;
-}
-
-.hotel-section .card .card-details .all-content .swiper-button-prev,
-.hotel-section .card .card-details .all-content .swiper-button-next {
-    position: static;
-    margin: 0;
-}
-
-.hotel-section .card .card-details .all-content .swiper-button-prev:after,
-.hotel-section .card .card-details .all-content .swiper-button-next:after {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 900;
-}
-
-.hotel-section .card .card-details .all-content .tab-content {
-    display: none;
-}
-
-.hotel-section .card .card-details .all-content .tab-content.active {
-    display: block;
-}
-
-/*room-type-content*/
-.hotel-section .card .card-details .all-content {
-    background-color: #81395b;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .swiper-button-prev,
-.hotel-section .card .card-details .all-content .tab-content .swiper-button-prev {}
-
-.hotel-section .card .card-details .swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.hotel-section .card .card-details .swiper-slide {
-    text-align: center;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    height: auto;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content {
-    background-color: #fff;
-    height: 100%;
-}
-.hotel-section .card .card-details .all-content .tab-content .card-content .room-icon {
-    width: 12px;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .info {
-    font-size: 15px;
-    color: #999;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .info.free {
-    color: #00b285;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .card-title {
-    font-size: 20px;
-    color: #80395a;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .card-text {
-    font-size: 15px;
-    color: #999;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content svg {
-    font-size: 25px;
-    color: #00b285;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .text {
-    font-size: 15px;
-    color: #999;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .progress {
-    height: 45px;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon {
-    width: 40px;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num {
-    color: #fff;
-    font-size: 13px;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .section-title {
-    color: #fff;
-    font-size: 25px;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text  {
-    color: #fff;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .rating-img  {
-    width: 40%;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box
-{
-    position: relative;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box::after
-{
-    content: "";
-    width: 2px;
-    height: 100%;
-    background-color: #222;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle  {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    border-radius: 70%;
-    border: 3px solid #444;
-    background-color: #ddd;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .username  {
-    font-size: 20px;
-    color: #b14d7b;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon  {
-    width: 90%;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt  {
-    font-size: 13px;
-    color: #b14d7b;
-}
-.hotel-section .card .card-details .all-content .tab-content.reviews-content hr  {
-    border-top: 2px solid #222;
-}
-
-
-.hotel-section .card .card-details .all-content .tab-content .map-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .map-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-@media (min-width: 1750px) {
-    .hotel-section .card .card-title
-    {
-        font-size: 1.5vmax;
-    }
-    .hotel-section .card .stars svg
-    {
-        font-size: .9vmax;
-    }
-    .hotel-section .card .location-info img
-    {
-        font-size: .9vmax;
-    }
-    .hotel-section .card .location-info .location-name, 
-    .hotel-section .card .nights-num
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .room-type-text
-    {
-        font-size: .8vmax;
-    }
-    .hotel-section .card .rating-info img
-    {
-        width: 7vmax;
-    }
-    .hotel-section .card .rating-info .rating-num
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .room-type .title
-    {
-        font-size: 1.1vmax;
-    }
-    .hotel-section .card .room-type .list-items .list_item
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .tabs-container .swiper-slide .icon
-    {
-        width: 1.2vmax;
-    }
-    .hotel-section .card .card-details .tabs-container .swiper-slide.selected .tab-title
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .swiper-button-prev:after, .hotel-section .card .card-details .all-content .swiper-button-next:after
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .card-title
-    {
-        font-size: 1.2vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .card-text
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .text
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .stars svg
-    {
-        font-size: 1.1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .username
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .room-icon
-    {
-        width: .8vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content .info
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content .card-content svg
-    {
-        font-size: 1.5vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .progress
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon
-    {
-        width: 2.5vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num
-    {
-        font-size: .8vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text
-    {
-        font-size: 1vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle
-    {
-        width: 4.5vmax;
-        height: 4.5vmax;
-        line-height: 4.5vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .username
-    {
-        font-size: 1.2vmax;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
-    {
-        width: 80%;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt
-    {
-        font-size: .8vmax;
-    }
-}
-@media (max-width: 1199px){
-    .hotel-section .card .card-details .all-content .tab-content .card-content .info {
-        font-size: 12px;
-    }
-}
-@media (max-width: 767px) {
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box::after
-    {
-        display: none;
-    }
-    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
-    {
-        width: 70px;
-    }
-}
-/*End hotel-section*/
-
-
 /*Start Flight Section*/
 .flight-section {
     background-color: #672e49;
+}
+.flight-section .section_title {
+    font-size: 25px;
+    color: #fff;
 }
 
 .flight-section .card {
@@ -1475,12 +1017,10 @@ label {
     background-color: #fff;
 }
 @media (min-width: 1750px) {
-    /*
-    .flight-section .card .airline-logo
+    .flight-section .section_title
     {
-        width: 5vmax;
+        font-size: 1.5vmax;
     }
-    */
     .flight-section .card .card-title
     {
         font-size: 1.2vmax;
@@ -1513,7 +1053,7 @@ label {
 @media(max-width: 991px) {
     .flight-section .card .airline-logo
     {
-        width: 100%;
+        width: 70px;
     }
     .flight-section .responsive-tabs .res-tab-item
     {
@@ -1563,14 +1103,485 @@ label {
 
 
 
-/*Start program-offer-section*/
-.program-offer-section
+/*Start hotel-section*/
+.hotel-section {
+    background-color: #e6eaed;
+}
+
+.hotel-section .section_title {
+    color: #444;
+    font-size: 25px;
+}
+.hotel-section .card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .3s;
+}
+
+
+.hotel-section .card .card-img {
+    transition: .3s;
+}
+
+.hotel-section .card.active .card-img {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.hotel-section .card .card-title {
+    font-size: 22px;
+    color: #444;
+}
+
+.hotel-section .card .stars svg {
+    font-size: 14px;
+    color: #ffc412;
+}
+
+.hotel-section .card .location-info img {
+    width: 13px;
+}
+
+.hotel-section .card .location-info .location-name
 {
-    /*
+    font-size: 15px;
+}
+.hotel-section .card .room-type-text {
+    font-size: 16px;
+    color: #ae4d7b;
+}
+.hotel-section .card .room-type-text .txt {
+    color: #999;
+}
+.hotel-section .card .rating-info img {
+    width: 120px;
+}
+
+.hotel-section .card .rating-info .rating-num {
+    font-size: 15px;
+    color: #999;
+}
+
+.hotel-section .card .night-num-container 
+{
+    background-color: #ae4d7b;
+    width: 120px;
+    height: 120px;
+}
+.hotel-section .card .night-num-container .night-num
+{
+    font-size: 50px;
+    color: #fff;
+}
+.hotel-section .card .night-num-container .night-txt
+{
+    font-size: 16px;
+    color: #fff;
+}
+
+.hotel-section .card .card-arrow-container {
+    background-color: #80395a;
+}
+.hotel-section .card .card-arrow-container .txt {
+    color: #fff;
+    font-size: 15px;
+    transition: .3s;
+}
+.hotel-section .card .card-arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hotel-section .card .card-arrow-container .card-arrow.arrow-down {
+    background-color: #ae4d7b;
+    opacity: 1;
+}
+
+.hotel-section .card.active .card-arrow-container {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.hotel-section .card .card-arrow.arrow-up {
+    background-color: #b45482;
+}
+
+.hotel-section .card .card-arrow svg {
+    color: #fff;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.hotel-section .card .card-details {
+    display: none;
+}
+
+.hotel-section .card .card-details .tabs-container {
+    background-color: #672e49;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-button-prev,
+.hotel-section .card .card-details .tabs-container .swiper-button-next {
+    color: #fff;
+    cursor: pointer;
+    position: static;
+    margin: 0;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-button-prev::after,
+.hotel-section .card .card-details .tabs-container .swiper-button-next::after {
+    font-size: 16px;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide {
+    cursor: pointer;
+}
+.hotel-section .card .card-details .tabs-container .swiper-slide.selected {
+    border-bottom: 6px solid #80395a;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide .icon {
+    width: 20px;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide .icon:nth-of-type(1) {
+    display: block;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide .icon:nth-of-type(2) {
+    display: none;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide.selected .icon:nth-of-type(1) {
+    display: none;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide.selected .icon:nth-of-type(2) {
+    display: block;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide .tab-title {
+    color: #b35381;
+}
+
+.hotel-section .card .card-details .tabs-container .swiper-slide.selected .tab-title {
+    color: #fff;
+}
+
+.hotel-section .card .card-details .all-content .swiper-button-prev,
+.hotel-section .card .card-details .all-content .swiper-button-next {
+    position: static;
+    margin: 0;
+}
+
+.hotel-section .card .card-details .all-content .swiper-button-prev:after,
+.hotel-section .card .card-details .all-content .swiper-button-next:after {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.hotel-section .card .card-details .all-content .tab-content {
+    display: none;
+}
+
+.hotel-section .card .card-details .all-content .tab-content.active {
+    display: block;
+}
+
+/*room-type-content*/
+.hotel-section .card .card-details .all-content {
+    background-color: #81395b;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .swiper-button-prev,
+.hotel-section .card .card-details .all-content .tab-content .swiper-button-prev {}
+
+.hotel-section .card .card-details .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.hotel-section .card .card-details .swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: auto;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .card-content {
+    background-color: #fff;
+    height: 100%;
+}
+.hotel-section .card .card-details .all-content .tab-content .card-content .room-icon {
+    width: 12px;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .card-content .info {
+    font-size: 15px;
+    color: #999;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .card-content .info.free {
+    color: #00b285;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .card-content .card-title {
+    font-size: 20px;
+    color: #80395a;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .card-content .card-text {
+    font-size: 15px;
+    color: #999;
+}
+
+.hotel-section .card .card-details .all-content .tab-content.room-type-content .card-content .upgrade-container{
+    background-color: #00b285;
+}
+.hotel-section .card .card-details .all-content .tab-content.room-type-content .card-content svg {
+    font-size: 25px;
+    color: #fff;
+}
+
+.hotel-section .card .card-details .all-content .tab-content.room-type-content .card-content .text {
+    font-size: 15px;
+    color: #fff;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .progress {
+    height: 45px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon {
+    width: 40px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num {
+    color: #fff;
+    font-size: 13px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .section-title {
+    color: #fff;
+    font-size: 25px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text  {
+    color: #fff;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .rating-img  {
+    width: 40%;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box
+{
+    position: relative;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle  {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 70%;
+    border: 3px solid #444;
+    background-color: #ddd;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .client-name  {
+    font-size: 20px;
+    color: #b14d7b;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon  {
+    width: 90px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt  {
+    font-size: 15px;
+    color: #b14d7b;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content hr  {
+    border-top: 2px solid #222;
+}
+
+
+.hotel-section .card .card-details .all-content .tab-content .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.hotel-section .card .card-details .all-content .tab-content .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+@media (min-width: 1750px) {
+    .hotel-section .section_title {
+        font-size: 1.5vmax;
+    }
+    .hotel-section .card .card-title
+    {
+        font-size: 1.5vmax;
+    }
+    .hotel-section .card .stars svg
+    {
+        font-size: .9vmax;
+    }
+    .hotel-section .card .location-info img
+    {
+        font-size: .9vmax;
+    }
+    .hotel-section .card .location-info .location-name, 
+    .hotel-section .card .nights-num
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .room-type-text
+    {
+        font-size: .8vmax;
+    }
+    .hotel-section .card .rating-info img
+    {
+        width: 7vmax;
+    }
+    .hotel-section .card .rating-info .rating-num
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .night-num-container
+    {
+        width: 8vmax;
+        height: 8vmax;
+    }
+    .hotel-section .card .night-num-container .night-num
+    {
+        font-size: 3vmax;
+    }
+    .hotel-section .card .night-num-container .night-txt
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .tabs-container .swiper-slide .icon
+    {
+        width: 1.2vmax;
+    }
+    .hotel-section .card .card-details .tabs-container .swiper-slide.selected .tab-title
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .swiper-button-prev:after, .hotel-section .card .card-details .all-content .swiper-button-next:after
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .card-title
+    {
+        font-size: 1.2vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .card-text
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.room-type-content .card-content svg
+    {
+        font-size: 1.3vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.room-type-content .card-content .text
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .stars svg
+    {
+        font-size: 1.1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .client-name
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .room-icon
+    {
+        width: .8vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content .info
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content .card-content svg
+    {
+        font-size: 1.5vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .progress
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon
+    {
+        width: 2.5vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num
+    {
+        font-size: .8vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle
+    {
+        width: 4.5vmax;
+        height: 4.5vmax;
+        line-height: 4.5vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .client-name
+    {
+        font-size: 1.2vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
+    {
+        width: 90px;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt
+    {
+        font-size: .8vmax;
+    }
+}
+@media (max-width: 1199px){
+    .hotel-section .card .card-details .all-content .tab-content .card-content .info {
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
+    {
+        width: 70px;
+    }
+    .hotel-section .card .room-type-text
+    {
+        font-size: 14px;
+    }
+}
+/*End hotel-section*/
+
+
+
+/*Start program-offer-section*/
+.program-offer-section .section_title
+{
+    font-size: 25px;
+    color: #444;
+}
+.program-offer-section .section-container
+{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    */
-    height: 90vh;
     display: flex;
     align-items: center;
 }
@@ -1580,13 +1591,13 @@ label {
 }
 .program-offer-section .box-container .box-head
 {
-    font-size: 30px;
+    font-size: 2.5vw;
     background-color: rgba(103, 46, 73, 0.60);
     color: #fff;
 }
 .program-offer-section .box-container .box-body
 {
-    font-size: 18px;
+    font-size: 1.8vw;
     color: #fff;
     background-color: rgba(0,0,0,.5);
 }
@@ -1601,12 +1612,12 @@ label {
 .program-offer-section .box-container .cities-container .city-name
 {
     color: #fff;
-    font-size: 14px;
+    font-size: 1.3vw;
 }
 .program-offer-section .night-price .nights-num
 {
-    width: 110px;
-    height: 110px;
+    width: 13vw;
+    height: 13vw;
     border-radius: 50%;
     border: 3px solid #fff;
     background-color: #00bfff;
@@ -1616,15 +1627,15 @@ label {
 }
 .program-offer-section .night-price .nights-num .number
 {
-    font-size: 40px;
+    font-size: 5.5vw;
 }
 .program-offer-section .night-price .nights-num .text
 {
-    font-size: 18px;
+    font-size: 1.5vw;
 }
 .program-offer-section .night-price .price-info
 {
-    font-size: 25px;
+    font-size: 2.5vw;
     color: #fff;
     background-color: #b45482;
     padding-left: 50px;
@@ -1638,16 +1649,12 @@ label {
 {
     background-color: #fff;
     border-radius: .5rem;
-    width: 100px;
+    width: 9vw;
 }
 @media (min-width: 1750px) {
-    .program-offer-section .box-container .box-head
+    .program-offer-section .section_title
     {
-        font-size: 2vmax;
-    }
-    .program-offer-section .box-container .box-body
-    {
-        font-size: 1.2vmax;
+        font-size: 1.5vmax;
     }
     .program-offer-section .box-container .cities-container .location-icon
     {
@@ -1655,28 +1662,7 @@ label {
     }
     .program-offer-section .box-container .cities-container .city-name
     {
-        font-size: .8vmax;
-    }
-    .program-offer-section .night-price .nights-num
-    {
-        width: 8vmax;
-        height: 8vmax;
-    }
-    .program-offer-section .night-price .nights-num .number
-    {
-        font-size: 2.3vmax;
-    }
-    .program-offer-section .night-price .nights-num .text
-    {
-        font-size: 1.1vmax;
-    }
-    .program-offer-section .night-price .price-info
-    {
-        font-size: 1.5vmax;
-    }
-    .program-offer-section .airline-logo-container .airline-box
-    {
-        width: 6vmax;
+        font-size: 1vmax;
     }
 }
 @media (max-width: 1199px){
@@ -1688,15 +1674,7 @@ label {
 @media (max-width: 991px){
     .program-offer-section .box-container
     {
-        width: 100%;
-    }
-}
-@media (max-width: 577px){
-    .program-offer-section
-    {
-        height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        width: 80%;
     }
     .program-offer-section .box-container .box-head
     {
@@ -1705,6 +1683,26 @@ label {
     .program-offer-section .box-container .box-body
     {
         font-size: 16px;
+    }
+    .program-offer-section .box-container .cities-container .city-name
+    {
+        font-size: 13px;
+    }
+    .program-offer-section .airline-logo-container .airline-box
+    {
+        width: 70px;
+    }
+}
+@media (max-width: 577px){
+    .program-offer-section .box-container
+    {
+        width: 100%;
+    }
+    .program-offer-section
+    {
+        height: auto;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     .program-offer-section .box-container
     {
@@ -1742,6 +1740,7 @@ label {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    height: auto;
 }
 .offer-imgs-section .swiper-button-next,
 .offer-imgs-section .swiper-button-prev
@@ -1773,7 +1772,99 @@ label {
     background-color: #81395b;
     font-size: 16px;
 }
-@media (min-width: 1750px)
+.offer-imgs-section .offer-card
+{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.offer-imgs-section .offer-card::after
+{
+    content: "";
+    width: 25vmax;
+    height: 25vmax;
+    border-radius: 50%;
+    border: 4vmax solid #ff9326;
+    position: absolute;
+    top: 6%;
+    right: -23%;
+    z-index: 2;
+}
+.offer-imgs-section .offer-card .airline-container
+{
+    position: absolute;
+    z-index: 3;
+    bottom: -4%;
+    left: -38%;
+    background-color: rgba(18, 144, 111, 0.58);
+    transform: rotateZ(-52deg);
+}
+.offer-imgs-section .offer-card .airline-container .logo-container
+{
+    width: 95px;
+    height: 95px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.offer-imgs-section .offer-card .airline-container .logo-container img
+{
+    width: 70%;
+    height: 50%;
+    transform: rotateZ(52deg);
+}
+.offer-imgs-section .offer-card .image
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+.offer-imgs-section .offer-card .offer-content
+{
+    position: relative;
+    z-index: 5;
+}
+.offer-imgs-section .offer-card .offer-content .card-title
+{
+    color: #fff;
+    text-shadow: 0 0 14px #222;
+    font-size: 30px;
+}
+.offer-imgs-section .offer-card .offer-content .info
+{
+    color: #fff;
+    text-shadow: 2px 3px 1px #222;
+    font-size: 20px;
+    
+}
+.offer-imgs-section .offer-card .offer-content .nights-num
+{
+    font-size: 100px;
+    text-shadow: 2px 3px 1px #222;
+    color: #fff;
+}
+.offer-imgs-section .offer-card .offer-content .text
+{
+    color: #fff;
+    text-shadow: 2px 3px 1px #222;
+    font-size: 30px;
+    line-height: 1;
+}
+.offer-imgs-section .offer-card .offer-content .text span
+{
+    font-size: 20px;
+}
+.offer-imgs-section .offer-card .offer-content .price
+{
+    text-shadow: 2px 3px 1px #222;
+    font-size: 48px;
+    color: #fff;
+}
+
+
+@media (min-width: 1500px)
 {
     .offer-imgs-section .swiper-button-next:after, .offer-imgs-section .swiper-button-prev:after
     {
@@ -1781,6 +1872,66 @@ label {
         height: 3vmax;
         line-height: 3vmax;
         font-size: 1vmax;
+    }
+    .offer-imgs-section .offer-card
+    {
+        min-height: 30vmax;
+    }
+    /*
+    .offer-imgs-section .offer-card
+    {
+        height: 600px;
+        min-height: 30vmax;
+    }
+    */
+    .offer-imgs-section .offer-card .offer-content .card-title
+    {
+        font-size: 2vmax;
+    }
+    .offer-imgs-section .offer-card .offer-content .info
+    {
+        font-size: 1.2vmax;
+    }
+    .offer-imgs-section .offer-card .offer-content .text
+    {
+        font-size: 2vmax;
+    }
+    .offer-imgs-section .offer-card .offer-content .nights-num
+    {
+        font-size: 5vmax;
+    }
+    .offer-imgs-section .offer-card .offer-content .text span
+    {
+        font-size: 1.2vmax;
+    }
+    .offer-imgs-section .offer-card .offer-content .price
+    {
+        font-size: 3vmax;
+    }
+    .offer-imgs-section .offer-card .airline-container .logo-container
+    {
+        width: 7vmax;
+        height: 7vmax;
+    }
+    .offer-imgs-section .offer-card .airline-container
+    {
+        bottom: -4%;
+        left: -38%;
+    }
+    .offer-imgs-section .offer-card::after
+    {
+        
+    }
+}
+@media (max-width: 767px) {
+    .offer-imgs-section .offer-card
+    {
+        height: 500px;   
+    }
+    .offer-imgs-section .offer-card::after
+    {
+        width: 50vmax;
+        height: 50vmax;
     }
 }
 @media (max-width: 567px) {
@@ -1891,6 +2042,15 @@ footer .title
     color: #fff;
     font-size: 20px;
 }
+footer .phone-input
+{
+    max-width: 300px;   
+}
+footer .phone-input::placeholder
+{
+    color: #fff;
+    text-align: center;
+}
 footer .list-item
 {
     position: relative;
@@ -1943,7 +2103,7 @@ footer .list-item .text
     font-size: 16px;
     color: #fff;
 }
-footer .list-item .form-control
+footer .form-control
 {
     border-color: #fff;
     background-color: transparent;
