@@ -536,6 +536,7 @@ label {
     z-index: 3;
     opacity: 0;
     cursor: pointer;
+    transform: translateY(-10px);
 }
 
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-scroll .scroll-circle {
