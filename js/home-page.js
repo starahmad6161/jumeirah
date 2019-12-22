@@ -313,6 +313,20 @@ $(function() {
     $( "footer .datepicker" ).datepicker();
 
 
+
+    $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td').on('click', function () {  
+        if (!$(this).hasClass('disable-td')) {
+            if (!$(this).hasClass('empty-td')) {
+                let td = $(this).parents('tr').siblings().find('td');
+                $(this).addClass('selected').siblings().removeClass('selected');
+                td.siblings().removeClass('selected');
+            }
+        }
+    });
+    
+    
+    
+
     $(window).on('load resize',  function () {  
         $('.main-section').css({
             paddingTop: ($('.header .slider .box-content .offer-box').innerHeight() / 2)
