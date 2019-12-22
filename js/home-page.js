@@ -1,8 +1,21 @@
 $(function() {
     'use strict';
-    $(".header .slider").css({
-        height: "calc( 100vh - " + $(".header .nav-bar").innerHeight() + "px)"
+
+    $(window).on('load resize', function () {  
+
+        if (window.innerWidth >= 768) {
+            $(".header .slider").css({
+                height: "calc( 100vh - " + ($(".header .nav-bar").innerHeight() + 25) + "px)"
+            });
+        } else {
+            
+            $(".header .slider").css({
+                height: "calc( 100vh - " + $(".header .nav-bar").innerHeight() + "px)"
+            });
+        }
     });
+    
+    
 
     
     /*Main Section Accordion*/
@@ -13,7 +26,6 @@ $(function() {
    });
 
    //Sidebar [Price Bar]
-   //100%
    let barMaxPrice_sidebar =  $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar .bar-container').data('max-price');
    $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar .bar-container .bar-item').each(function () {  
        let dataPrice = $(this).data('price'),
@@ -22,19 +34,30 @@ $(function() {
             height: totalPer + "%"
         });
    });
-
+   //Slider
+   let barVal = 0;
    $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-scroll .scroll-range').on('input', function () {  
        let inputVal = $(this).val();
-       if (inputVal > 60) {
-            inputVal = 60;
+       let barContainerWidth = $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar .bar-container').innerWidth();
+       let priceBarWidth = $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar').innerWidth();
+        barVal = inputVal;
+        if (barContainerWidth > priceBarWidth) {
+            if (inputVal > 70) {
+                 barVal = barContainerWidth - priceBarWidth;
+             }
+             //Bar
+             $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar .bar-container').css({
+                 transform: "translateX(-" + barVal + "px)"
+             });
         }
-       $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .price-bar .bar-container').css({
-           transform: "translateX(-" + inputVal + "%)"
-       });
-       //Circle
-       $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-scroll .scroll-circle').css({
-            left: inputVal + "%"
-       });       
+        //Circle
+       let num = 0;
+       if (inputVal > 95) {
+            num  = 20;
+       }
+        $('.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-scroll .scroll-circle').css({
+            left:  "calc(" + inputVal +  "% - "+ num +"px)"
+        });
    });
 
    //Stop Auto Slide carousel On [.pricing-calendar ]
@@ -70,12 +93,10 @@ $(function() {
     });
     let contentSwiperPhoto = new Swiper('.hotel-section .tab-content.photo-content .swiper-container',{
         //Your options here:
-        slidesPerView: 3,
         spaceBetween: 10,
         slidesPerGroup: 1,
         loop: false,
         loopFillGroupWithBlank: false,
-        slideToClickedSlide: true,
         observer: true,
         observeParents: true,
         navigation: {
@@ -84,13 +105,13 @@ $(function() {
         },
         breakpoints: {
             0: {
-                slidesPerView: 1
-            },
-            568: {
                 slidesPerView: 2
             },
-            768: {
+            568: {
                 slidesPerView: 3
+            },
+            768: {
+                slidesPerView: 6
             }
         }
     });
@@ -147,6 +168,7 @@ $(function() {
         }
     });
 
+    
     /*Hotel Section */
     //$(".hotel-section .card.active").show().siblings().hide();
     $('.hotel-section .card .card-arrow.arrow-down').on('click', function () {  
@@ -176,6 +198,14 @@ $(function() {
     });
     $('.hotel-section .card .card-details .all-content .tab-content .my-owl-next').on('click', function () {  
         $(this).parents('.tab-content').find('.owl-carousel').trigger('next.owl.carousel');
+    });
+
+    //Trigger LightGallery
+    $('#lightgallery').lightGallery();
+    /*When Click Image open gallery*/
+    $('.hotel-section .tab-content.photo-content .swiper-slide').on('click', function () {
+        let photoContent = $(this).parents('.tab-content.photo-content');
+        photoContent.find('#lightgallery .lg-item:eq('+ $(this).index() +')').trigger('click');
     });
 
 
@@ -273,6 +303,9 @@ $(function() {
             },
             768: {
                 slidesPerView: 3
+            },
+            1750: {
+                slidesPerView: 4
             }
         }
     });

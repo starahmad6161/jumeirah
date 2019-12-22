@@ -68,7 +68,7 @@ label {
 /*Start Header*/
 .header {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 22px);
     background-size: cover;
 }
 
@@ -89,13 +89,13 @@ label {
 }
 
 .header .nav-bar .brand-name {
-    font-size: 30px;
+    font-size: 3vmax;
     color: #fff;
 }
 
 .header .nav-bar .nav-text {
     color: #fff;
-    font-size: 16px;
+    font-size: 1.5vmax;
 }
 
 .header .slider {
@@ -108,27 +108,31 @@ label {
 }
 
 .header .slider .box-content .text-logo-content{
+    /*
     margin-top: 10%;
+    */
+    height: 100%;
 }
 .header .slider .box-content .text {
     color: #fff;
-    font-size: 25px;
-    width: 50%;
+    font-size: 2.6vmax;
+    width: 60%;
 }
 
 .header .slider .box-content .airline-logo {
-    width: 100px;
+    width: 10vmax;
 }
 
 .header .slider .box-content .offer-box {
     border-radius: 1rem;
     background: linear-gradient(0, #00698c, #81395b);
-    transform: translateY(50px);
+    transform: translateY(22px);
+    width: 70%;
 }
 
 .header .slider .box-content .offer-box .image {
-    width: 100px;
-    height: 100px;
+    width: 10vmax;
+    height: 10vmax;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -138,21 +142,26 @@ label {
     width: 100%;
 }
 
-.header .slider .box-content .offer-box .offer-content .username {
-    font-size: 18px;
+.header .slider .box-content .offer-box .offer-content .agent-name {
+    font-size: 2vmax;
 }
 
 .header .slider .box-content .offer-box .offer-content .icon {
-    width: 15px;
+    width: 1.2vmax;
 }
 
 .header .slider .box-content .offer-box .offer-content .text {
-    font-size: 14px;
+    font-size: 1.2vmax;
     overflow-wrap: break-word;
+    /*
+    */
 }
 
 .header .slider .box-content .offer-box .offer-content .offer-logo {
+    /*
     width: 60%;
+    */
+    width: 100%;
 }
 
 .header .slider .box-content .offer-box .offer-info {
@@ -185,15 +194,15 @@ label {
 @media (min-width: 1750px) {
     .header .nav-bar .brand-name
     {
-        font-size: 2vmax;
+        font-size: 2.3vmax;
     }
     .header .nav-bar .nav-text
     {
-        font-size: 1.1vmax;
+        font-size: 1.2vmax;
     }
     .header .slider .box-content .text
     {
-        font-size: 1.5vmax;
+        font-size: 2vmax;
     }
     .header .slider .box-content .airline-logo
     {
@@ -234,16 +243,29 @@ label {
         font-size: 1.8vmax;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .header .slider .box-content .text
     {
         width: 70%;
     }
 }
 @media (max-width: 767px) {
+    .header 
+    {
+        height: 100vh;
+    }
+    .header .slider .box-content .offer-box
+    {
+        transform: translateY(0);
+        width: 100%;
+    }
     .header .slider .box-content .text
     {
         width: 100%;
+    }
+    .header .slider .box-content .offer-box .offer-content .offer-logo
+    {
+        width: 70%;
     }
 }
 @media (max-width: 577px) {
@@ -379,6 +401,10 @@ label {
     height: 100%;
 }
 
+.main-section .main-section-box .section-sidebar .sidebar-title{
+    font-size: 20px;
+    color: #fff;
+}
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item {
     background-color: #fff;
     border-radius: .5rem;
@@ -407,43 +433,21 @@ label {
     display: block;
 }
 
+.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .box-title {
+    font-size: 15px;
+    color: #81395b;
+}
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .title {
     color: #545454;
     font-size: 15px;
 }
-
-.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox {
-    position: relative;
+.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .filter-btn {
+    background-color: #81395b;
+    color: #fff;
+    font-size: 18px;
+    border-radius: .5rem;
+    border: none;
 }
-
-.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox .checkbox {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox .checkbox-label {
-    position: relative;
-    z-index: 2;
-    width: 20px;
-    height: 20px;
-    border-radius: .2rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox .checkbox~.checkbox-label svg {
-    display: none;
-    color: #81395b;
-}
-
-.main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox .checkbox:checked~.checkbox-label svg {
-    display: block;
-}
-
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .select-box {
     border: 1.5px solid #bf7095;
     border-radius: .5rem;
@@ -575,7 +579,10 @@ label {
 
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td,
 .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table th {
+    /*
     padding: 3px 5px;
+    */
+    padding: 0;
     height: 35px;
 }
 
@@ -748,31 +755,59 @@ label {
         font-size: .9vmax;
     }
 }
-@media (max-width: 767px) {
-    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table thead,
-    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table tbody
-    {
-
-    }
+@media (max-width: 1199px){
+    /*
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td,
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table th
     {
-        /*
-        padding: 3vmax;
-        */
         padding: 10px;
-        width: 100px;
+        width: 150px;
     }
+    */
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table th
     {
-        font-size: 15px;
+        font-size: 20px;
     }
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .date-num
     {
-        font-size: 15px;
+        font-size: 20px;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .price
+    {
+        font-size: 20px;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .text
+    {
+        font-size: 16px;
     }
 }
-@media (max-width: 577px) {
+@media (max-width: 767px) {
+    /*
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td,
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table th
+    {
+        padding: 10px;
+        width: 100px;
+    }
+    */
+}
+@media (max-width: 567px) {
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table th
+    {
+        font-size: 10px;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .date-num
+    {
+        font-size: 10px;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .price
+    {
+        font-size: 10px;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .pricing-calendar .table td .text
+    {
+        font-size: 8px;
+    }
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .title
     {
         
@@ -822,10 +857,16 @@ label {
     width: 13px;
 }
 
-.hotel-section .card .location-info .location-name,
-.hotel-section .card .nights-num {
+.hotel-section .card .location-info .location-name
+{
+    font-size: 15px;
+}
+.hotel-section .card .room-type-text {
     font-size: 16px;
-    color: #444;
+    color: #ae4d7b;
+}
+.hotel-section .card .room-type-text .txt {
+    color: #999;
 }
 
 .hotel-section .card .room-type {
@@ -851,6 +892,14 @@ label {
     color: #999;
 }
 
+.hotel-section .card .card-arrow-container {
+    background-color: #80395a;
+}
+.hotel-section .card .card-arrow-container .txt {
+    color: #fff;
+    font-size: 15px;
+    transition: .3s;
+}
 .hotel-section .card .card-arrow {
     width: 30px;
     height: 30px;
@@ -858,13 +907,12 @@ label {
     cursor: pointer;
 }
 
-.hotel-section .card .card-arrow.arrow-down {
-    background-color: #ff9326;
+.hotel-section .card .card-arrow-container .card-arrow.arrow-down {
+    background-color: #ae4d7b;
     opacity: 1;
-    transition: .3s;
 }
 
-.hotel-section .card.active .card-arrow.arrow-down {
+.hotel-section .card.active .card-arrow-container {
     pointer-events: none;
     opacity: 0;
 }
@@ -881,6 +929,10 @@ label {
 
 .hotel-section .card .card-details {
     display: none;
+}
+/*****For Test*****/
+.hotel-section .card.active .card-details {
+    display: block;
 }
 
 .hotel-section .card .card-details .tabs-container {
@@ -902,6 +954,9 @@ label {
 
 .hotel-section .card .card-details .tabs-container .swiper-slide {
     cursor: pointer;
+}
+.hotel-section .card .card-details .tabs-container .swiper-slide.selected {
+    border-bottom: 6px solid #80395a;
 }
 
 .hotel-section .card .card-details .tabs-container .swiper-slide .icon {
@@ -988,10 +1043,6 @@ label {
     background-color: #fff;
     height: 100%;
 }
-
-.hotel-section .card .card-details .all-content .tab-content .room_image {
-    height: 150px;
-}
 .hotel-section .card .card-details .all-content .tab-content .card-content .room-icon {
     width: 12px;
 }
@@ -1024,21 +1075,64 @@ label {
     font-size: 15px;
     color: #999;
 }
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .progress {
+    height: 45px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon {
+    width: 40px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num {
+    color: #fff;
+    font-size: 13px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .section-title {
+    color: #fff;
+    font-size: 25px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text  {
+    color: #fff;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .rating-img  {
+    width: 40%;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box
+{
+    position: relative;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box::after
+{
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-.hotel-section .card .card-details .all-content .tab-content .card-content svg.quote_icon {
-    color: #b45482;
-    font-size: 30px;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle  {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 70%;
+    border: 3px solid #444;
+    background-color: #ddd;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .username  {
+    font-size: 20px;
+    color: #b14d7b;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon  {
+    width: 90%;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt  {
+    font-size: 13px;
+    color: #b14d7b;
+}
+.hotel-section .card .card-details .all-content .tab-content.reviews-content hr  {
+    border-top: 2px solid #222;
 }
 
-.hotel-section .card .card-details .all-content .tab-content .card-content .stars svg {
-    color: #ffc412;
-    font-size: 18px;
-}
-
-.hotel-section .card .card-details .all-content .tab-content .card-content .username {
-    font-size: 16px;
-    color: #b45482;
-}
 
 .hotel-section .card .card-details .all-content .tab-content .map-responsive {
     overflow: hidden;
@@ -1088,15 +1182,6 @@ label {
     {
         font-size: 1vmax;
     }
-    .hotel-section .card .card-arrow
-    {
-        width: 70px;
-        height: 70px;
-    }
-    .hotel-section .card .card-arrow svg
-    {
-        font-size: 1vmax;
-    }
     .hotel-section .card .card-details .tabs-container .swiper-slide .icon
     {
         width: 1.2vmax;
@@ -1129,10 +1214,6 @@ label {
     {
         font-size: 1vmax;
     }
-    .hotel-section .card .card-details .all-content .tab-content .room_image
-    {
-        height: auto;
-    }
     .hotel-section .card .card-details .all-content .tab-content .card-content .room-icon
     {
         width: .8vmax;
@@ -1149,18 +1230,6 @@ label {
 @media (max-width: 1199px){
     .hotel-section .card .card-details .all-content .tab-content .card-content .info {
         font-size: 12px;
-    }
-}
-@media (max-width: 767px) {
-    .hotel-section .card .card-details .all-content .tab-content .room_image
-    {
-        height: 250px;
-    }
-}
-@media (max-width: 567px) {
-    .hotel-section .card .card-details .all-content .tab-content .room_image
-    {
-        height: auto;
     }
 }
 /*End hotel-section*/
@@ -1188,11 +1257,11 @@ label {
 }
 
 .flight-section .card .airline-logo {
-    width: 70px;
+    width: 95px;
 }
 
 .flight-section .card .card-title {
-    font-size: 18px;
+    font-size: 20px;
     color: #672e49;
 }
 
@@ -1200,7 +1269,6 @@ label {
     
 }
 .flight-section .card .seat-text {
-    font-size: 14px;
     color: #535353;
 }
 
@@ -1211,10 +1279,29 @@ label {
     cursor: pointer;
 }
 
-.flight-section .card .card-arrow.arrow-down {
-    background-color: #0085b2;
-    opacity: 1;
+.flight-section .card .card-arrow-container {
+    background-color: #80395a;
+}
+.flight-section .card .card-arrow-container .txt {
+    color: #fff;
+    font-size: 15px;
     transition: .3s;
+}
+.flight-section .card .card-arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.flight-section .card .card-arrow-container .card-arrow.arrow-down {
+    background-color: #ae4d7b;
+    opacity: 1;
+}
+
+.flight-section .card.active .card-arrow-container {
+    pointer-events: none;
+    opacity: 0;
 }
 
 .flight-section .card.active .card-arrow.arrow-down {
@@ -1343,18 +1430,9 @@ label {
     }
     .flight-section .card .card-title
     {
-        font-size: 1.1vmax;
+        font-size: 1.2vmax;
     }
     .flight-section .card .seat-text
-    {
-        font-size: 1vmax;
-    }
-    .flight-section .card .card-arrow
-    {
-        width: 70px;
-        height: 70px;
-    }
-    .flight-section .card .card-arrow svg
     {
         font-size: 1vmax;
     }
@@ -1423,13 +1501,18 @@ label {
 
 
 /*Start program-offer-section*/
+.program-offer-section
+{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 .program-offer-section .box-container
 {
     width: 70%;
 }
 .program-offer-section .box-container .box-head
 {
-    font-size: 30px;
+    font-size: 35px;
     background-color: rgba(103, 46, 73, 0.60);
     color: #fff;
 }
