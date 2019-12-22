@@ -177,7 +177,6 @@ label {
     right: 10px;
     color: #fff;
 }
-
 .header .slider .box-content .offer-box .offer-info .nights-num {
     font-size: 12px;
 }
@@ -635,6 +634,10 @@ label {
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .title
     {
         font-size: 1vmax;
+    }
+    .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .box-title
+    {
+        font-size: 1vmax
     }
     .main-section .main-section-box .section-sidebar .accordion-container .accordion-item .acc-content .custom-checkbox .checkbox-label
     {
@@ -1166,6 +1169,10 @@ label {
     {
         font-size: 1vmax;
     }
+    .hotel-section .card .room-type-text
+    {
+        font-size: .8vmax;
+    }
     .hotel-section .card .rating-info img
     {
         width: 7vmax;
@@ -1226,10 +1233,54 @@ label {
     {
         font-size: 1.5vmax;
     }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .progress
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .advisor-icon
+    {
+        width: 2.5vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .reviews-num
+    {
+        font-size: .8vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .avg-text
+    {
+        font-size: 1vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .circle
+    {
+        width: 4.5vmax;
+        height: 4.5vmax;
+        line-height: 4.5vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box .username
+    {
+        font-size: 1.2vmax;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
+    {
+        width: 80%;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .desc-txt
+    {
+        font-size: .8vmax;
+    }
 }
 @media (max-width: 1199px){
     .hotel-section .card .card-details .all-content .tab-content .card-content .info {
         font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .name-box::after
+    {
+        display: none;
+    }
+    .hotel-section .card .card-details .all-content .tab-content.reviews-content .box-rating_icon
+    {
+        width: 70px;
     }
 }
 /*End hotel-section*/
@@ -1257,7 +1308,7 @@ label {
 }
 
 .flight-section .card .airline-logo {
-    width: 95px;
+    width: 95%;
 }
 
 .flight-section .card .card-title {
@@ -1424,10 +1475,12 @@ label {
     background-color: #fff;
 }
 @media (min-width: 1750px) {
+    /*
     .flight-section .card .airline-logo
     {
         width: 5vmax;
     }
+    */
     .flight-section .card .card-title
     {
         font-size: 1.2vmax;
@@ -1471,6 +1524,16 @@ label {
     {
         color: #fff;
     }
+    .flight-section .card .seat-text
+    {
+        font-size: 14px;
+    }
+}
+@media(max-width: 767px) {
+    .flight-section .card .seat-text
+    {
+        font-size: 16px;
+    }
 }
 @media(max-width: 567px) {
     .flight-section .card .airline-logo
@@ -1503,8 +1566,13 @@ label {
 /*Start program-offer-section*/
 .program-offer-section
 {
+    /*
     padding-top: 5rem;
     padding-bottom: 5rem;
+    */
+    height: 90vh;
+    display: flex;
+    align-items: center;
 }
 .program-offer-section .box-container
 {
@@ -1512,13 +1580,13 @@ label {
 }
 .program-offer-section .box-container .box-head
 {
-    font-size: 35px;
+    font-size: 30px;
     background-color: rgba(103, 46, 73, 0.60);
     color: #fff;
 }
 .program-offer-section .box-container .box-body
 {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     background-color: rgba(0,0,0,.5);
 }
@@ -1611,6 +1679,12 @@ label {
         width: 6vmax;
     }
 }
+@media (max-width: 1199px){
+    .program-offer-section .box-container
+    {
+        width: 100%;
+    }
+}
 @media (max-width: 991px){
     .program-offer-section .box-container
     {
@@ -1618,6 +1692,12 @@ label {
     }
 }
 @media (max-width: 577px){
+    .program-offer-section
+    {
+        height: auto;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
     .program-offer-section .box-container .box-head
     {
         font-size: 20px;
